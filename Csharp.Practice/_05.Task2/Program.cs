@@ -6,11 +6,11 @@ namespace _05.Task2
     {
         static void Main(string[] args)
         {
-            short shortValue = 1;
+            short shortValue = default;
 
             object obj = shortValue;
 
-            sbyte sbyteValue = Convert.ToSByte(obj);
+            sbyte sbyteValue = (sbyte)(short)obj;
 
             Console.WriteLine($"Variable value = {sbyteValue}");
             Console.WriteLine($"Type is {sbyteValue.GetType()}");
