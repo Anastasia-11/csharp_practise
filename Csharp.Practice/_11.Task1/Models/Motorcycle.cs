@@ -45,7 +45,14 @@ namespace _11.Task1.Models
         private string _manufacturer;
         private int _releaseYear;
         private double _mileage;
-        public Engine MotoEngine;
+        private Engine _engine;
+
+        public Engine MotoEngine
+        {
+            get => _engine;
+            set => _engine = value;
+        }
+
         public Guid Guid => _guid;
 
         public string Model
@@ -98,7 +105,7 @@ namespace _11.Task1.Models
             _manufacturer = manufacturer;
             _releaseYear = DateTime.Today.Year;
             _mileage = mileage;
-            MotoEngine = engine;
+            _engine = engine;
         }
 
         private void ResetFactorySettings()
